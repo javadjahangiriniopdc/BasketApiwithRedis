@@ -29,7 +29,7 @@ namespace BasketApiwithRedis.Controllers
             return Ok(await _repositroy.UpdateBasket(basket));
         }
 
-        [HttpGet("{userName}", Name = "DeleteBasket")]
+        [HttpDelete("{userName}", Name = "DeleteBasket")]
         [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteBasket(string userName)
         {
